@@ -45,14 +45,13 @@ import android.widget.RelativeLayout;
 
 /**
  * Author :    Chutaux Robin
- * Date :      10/8/2014
  */
 public class RippleView extends RelativeLayout {
 
     private int WIDTH;
     private int HEIGHT;
     private int FRAME_RATE = 10;
-    private int DURATION = 400;
+    private int DURATION = 100;
     private int PAINT_ALPHA = 90;
     private Handler canvasHandler;
     private float radiusMax = 0;

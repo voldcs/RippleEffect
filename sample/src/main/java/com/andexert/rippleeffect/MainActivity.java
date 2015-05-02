@@ -10,8 +10,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.TextView;
+import android.app.*;
+import android.widget.*;
+import android.content.*;
+
 
 import com.andexert.library.RippleView;
 
@@ -102,6 +104,19 @@ public class MainActivity extends ActionBarActivity
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id)
                 {
+                	
+                     AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create(); 
+                     alertDialog.setTitle("hi");
+                     alertDialog.setMessage("this is my app");
+
+                     alertDialog.setButton("Continue..", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                           // do nothing
+                        }
+                     });
+
+                     alertDialog.show();  //<-- See This!
+                	
                     Log.e("MainActivity", "ListView tap item : " + position);
                 }
             });
